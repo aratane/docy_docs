@@ -1,0 +1,42 @@
+/*font Variables*/
+$rob: "Roboto", sans-serif;
+$great: "Great Vibes", cursive;
+
+$hover3: #c6e7f7;
+
+// Mixins
+@mixin transition(
+  $property: all,
+  $duration: 300ms,
+  $animate: linear,
+  $delay: 0s
+) {
+  transition: $property $duration $animate $delay;
+}
+
+/**=== Functions ===**/
+@function brand_color_rgba($alpha) {
+  @return rgba(76, 76, 241, $alpha);
+}
+
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+.col-md-offset-right-1,
+.col-lg-offset-right-1 {
+  margin-right: 8.33333333%;
+}
